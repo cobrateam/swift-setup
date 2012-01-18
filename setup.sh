@@ -25,3 +25,12 @@ chown -R ${USERNAME}:${USERGROUP} /etc/swift /srv/[1-4]/ /var/run/swift
 #mkdir /var/run/swift
 #chown <your-user-name>:<your-group-name> /var/run/swift
 #add to /etc/rc.local
+
+#setting up rsync
+mv ${FILES}/rsyncd.conf /etc/rsyncd.conf
+#edit /etc/default/rsync
+#RSYNC_ENABLE=true
+service rsync restart
+
+
+
