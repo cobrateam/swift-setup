@@ -32,5 +32,12 @@ mv ${FILES}/rsyncd.conf /etc/rsyncd.conf
 #RSYNC_ENABLE=true
 service rsync restart
 
+#getting the code
+mkdir ~/bin
+git clone https://github.com/openstack/swift.git
+cd ~/swift; sudo python setup.py develop
+cat "export PATH=${PATH}:~/bin" > ~/.bashrc
+. ~/.bashrc
+
 
 
